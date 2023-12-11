@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let item of data">
+    {{ item.name }}
+    <button (click)="updateData(item)">update</button>
+    <button (click)="deleteData(item.id)">Delete</button>
+  </li>
+</ul>
+
+<button (click)="addData()">Add Data</button>
