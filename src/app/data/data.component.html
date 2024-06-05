@@ -1,9 +1,8 @@
-<ul>
-  <li *ngFor="let item of data">
-    {{ item.name }}
-    <button (click)="updateData(item)">update</button>
-    <button (click)="deleteData(item.id)">Delete</button>
-  </li>
-</ul>
-
-<button (click)="addData()">Add Data</button>
+<div class="header-toolbar" (click)="toggleOptions()">
+  🛠 Toolbar <!-- Use an appropriate icon or text for the toolbar -->
+  <div *ngIf="showOptions" class="options">
+    <div (click)="handleOptionClick(1)">Option 1</div>
+    <div (click)="handleOptionClick(2)">Option 2</div>
+    <div (click)="handleOptionClick(3)">Option 3</div>
+  </div>
+</div>

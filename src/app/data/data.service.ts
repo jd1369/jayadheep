@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class DataService {
-  private url = '/assets/data.json';
+  private url = 'http://localhost:3000/posts';
 
   constructor(private http: HttpClient) {}
 
@@ -17,7 +17,7 @@ export class DataService {
     return this.http.post(this.url, item);
   }
   deleteData(id: any) {
-    return this.http.delete(this.url + id);
+    return this.http.delete(this.url , id);
   }
   updateData(item: any): Observable<any> {
     return this.http.put(this.url + item.id, item);
